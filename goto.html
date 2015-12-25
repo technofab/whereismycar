@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<header>
+<title>Where is my car?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<!-- Favicon generator -->
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- Credits to http://www.favicon-generator.org/ -->
+</header>
+<body>
+<script type="text/javascript">
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+  function getCookie(name)
+    {
+        var re = new RegExp(name + "=([^;]+)");
+            var value = re.exec(document.cookie);
+                return (value != null) ? unescape(value[1]) : null;
+                  }
+
+var lat = getCookie('latitudine');
+// alert(lat);
+var lon = readCookie('longitudine');
+// alert(lon);
+
+
+checkuseragent: {
+if (navigator.userAgent.match(/Windows Phone/i)) {
+    // alert('WP');
+    location.href = 'wp.html';
+    break checkuseragent;
+} else if (navigator.userAgent.match(/Android/i)) {
+    // alert('Android');
+   // location.href = 'http://maps.google.com/?q=' + lat + ',' + lon;
+   window.location = 'http://maps.google.com/?q=' + lat + ',' + lon;
+   break checkuseragent;
+} else if (navigator.userAgent.match(/Apple/i)) {
+    // alert('Apple');
+    location.href = 'http://maps.google.com/?q=' + lat + ',' + lon;
+    break checkuseragent;
+} else {
+    // Infine se non fa match con nessun'altro
+    document.write("Non riconosco il tuo device!!!")
+    break checkuseragent;
+}
+}   
+</script>
+</body>
+</html>
+
+
+
