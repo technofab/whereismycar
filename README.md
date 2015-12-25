@@ -1,5 +1,5 @@
-# whereismycar
-La casa della applicazione whereismycar 
+# Where is my car?
+Benvenuti nella casa della applicazione Where is my car? 
 
 # Scopo della applicazione:
 Questa semplice applicazione web permette di salvare le proprie coordinate, per poi richiamarle per raggiungerle una volta necessarie.
