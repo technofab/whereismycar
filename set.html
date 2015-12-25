@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html>
-<header>
-<title>Where is my car?</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<!-- Favicon generator -->
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<!-- Credits to http://www.favicon-generator.org/ -->
-</header>
-<body onload="getLocation()">
-<p id="posizione"></p>
-<script>
-var x = document.getElementById("posizione");
-function setCookie(cname, cvalue) {
-    var d = new Date();
-    d.setTime(d.getTime() + (365*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
+    <header>
+        <title>Where is my car?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <!-- Favicon generator -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Credits to http://www.favicon-generator.org/ -->
+    </header>
+    <body onload="getLocation()">
+        <p id="posizione"></p>
+        <script>
+            var x = document.getElementById("posizione");
+            function setCookie(cname, cvalue) {
+                var d = new Date();
+                d.setTime(d.getTime() + (365*24*60*60*1000));
+                var expires = "expires="+d.toUTCString();
+                document.cookie = cname + "=" + cvalue + "; " + expires;
+            }
 
-function getLocation() {
-    if (navigator.geolocation) {
-       navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-      x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
 
-function showPosition(position) {
-    x.innerHTML = "Coordinate salvate con successo!<br>Latitudine: " + position.coords.latitude + "<br>Longitudine: " + position.coords.longitude;	
-    var lat = position.coords.latitude;
-    var long = position.coords.longitude;
-    setCookie("latitudine", lat);  
-    setCookie("longitudine", long);                                  
-}
-</script>
-<a href="javascript:history.back()"><img src='http://dabuttonfactory.com/button.png?t=Torna+indietro&f=Calibri-Bold&ts=24&tc=fff&tshs=1&tshc=000&w=290&h=50&c=5&bgt=gradient&bgc=3d85c6&ebgc=073763'></a>
-</body>
+            function showPosition(position) {
+                x.innerHTML = "Coordinate salvate con successo!<br>Latitudine: " + position.coords.latitude + "<br>Longitudine: " + position.coords.longitude;	
+                var lat = position.coords.latitude;
+                var long = position.coords.longitude;
+                setCookie("latitudine", lat);  
+                setCookie("longitudine", long);                                  
+            }
+        </script>
+        <a href="javascript:history.back()"><img src='http://dabuttonfactory.com/button.png?t=Torna+indietro&f=Calibri-Bold&ts=24&tc=fff&tshs=1&tshc=000&w=290&h=50&c=5&bgt=gradient&bgc=3d85c6&ebgc=073763'></a>
+    </body>
 </html>
