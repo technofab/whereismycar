@@ -28,6 +28,7 @@ Pubblicazione su GitHub per la gestione del versioning.
 
 # TODO
 a) Aggiunta supporto per altri dispositivi
+
 b) Rendere l'applicazione compatibile con PhoneGap per la creazione di applicazioni standalone 
 
 # Wishlist
