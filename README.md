@@ -11,6 +11,9 @@ L'applicazione è totalmente opensource, siete liberi di usarla e modificarla a 
 Mi farebbe però piacere sapere dove la usate e come la state modificando.
 Per le modifiche è incoraggiato l'uso di fork partendo dal repository principale su GitHub: https://github.com/technofab/whereismycar
 
+Lo sviluppo è stato fatto interamente con Adobe Brackets editor totalmente opensource.
+
 # Changelog
 25.12.2015 - Versione 1.0 - Initial release
 Buone Feste a tutti voi, versione iniziale, con qualche baco sicuramente.
+Pubblicazione su GitHub per la gestione del versioning.

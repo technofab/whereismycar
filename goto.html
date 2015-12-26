@@ -23,44 +23,44 @@
         <meta name="theme-color" content="#ffffff">
         <!-- Credits to http://www.favicon-generator.org/ -->
     </header>
-<body>
-    <script type="text/javascript">
-        function readCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for(var i=0;i < ca.length;i++) {
-                var c = ca[i];
-                while (c.charAt(0)==' ') c = c.substring(1,c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    <body>
+        <script type="text/javascript">
+            function readCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                }
+                return null;
             }
-            return null;
-        }
-        
-        var lat = readCookie('latitudine');
-        var lon = readCookie('longitudine');
-        // alert(lat);
-        // alert(lon);
 
-        checkuseragent: {
-            if (navigator.userAgent.match(/Windows Phone/i)) {
-                // alert('WP');
-                window.location = 'wp.html';
-                break checkuseragent;
-            } else if (navigator.userAgent.match(/Android/i)) {
-                // alert('Android');
-                // location.href = 'http://maps.google.com/?q=' + lat + ',' + lon;
-                window.location = 'http://maps.google.com/?q=' + lat + ',' + lon;
-                break checkuseragent;
-            } else if (navigator.userAgent.match(/Apple/i)) {
-                // alert('Apple');
-                window.location = 'http://maps.google.com/?q=' + lat + ',' + lon;
-                break checkuseragent;
-            } else {
-                // Infine se non fa match con nessun'altro
-                document.write("Non riconosco il tuo device!!!")
-                break checkuseragent;
+            var lat = readCookie('latitudine');
+            var lon = readCookie('longitudine');
+            // alert(lat);
+            // alert(lon);
+
+            checkuseragent: {
+                if (navigator.userAgent.match(/Windows Phone/i)) {
+                    // alert('WP');
+                    window.location = 'wp.html';
+                    break checkuseragent;
+                } else if (navigator.userAgent.match(/Android/i)) {
+                    // alert('Android');
+                    // location.href = 'http://maps.google.com/?q=' + lat + ',' + lon;
+                    window.location = 'http://maps.google.com/?q=' + lat + ',' + lon;
+                    break checkuseragent;
+                } else if (navigator.userAgent.match(/Apple/i)) {
+                    // alert('Apple');
+                    window.location = 'http://maps.google.com/?q=' + lat + ',' + lon;
+                    break checkuseragent;
+                } else {
+                    // Infine se non fa match con nessun'altro
+                    document.write("Non riconosco il tuo device!!!")
+                    break checkuseragent;
+                }
             }
-        }
-    </script>
-</body>
+        </script>
+    </body>
 </html>
