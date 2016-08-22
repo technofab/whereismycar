@@ -1,0 +1,11 @@
+22.08.2016 - Versione 1.1a - Migliorie
+Maggiore integrazione con iOS 9 e Chrome/Safari e Apple Maps
+Maggiore integtazione con sistemi Windows Phone 8.1 e Windows 10 Mobile
+
+26.12.2015 - Versione 1.1 - Prime migliorie
+Sistemati alcuni bugs
+Aggiunto il supporto alle Apple Maps
+
+25.12.2015 - Versione 1.0 - Initial release
+Buone Feste a tutti voi, versione iniziale, con qualche baco sicuramente.
+Pubblicazione su GitHub per la gestione del versioning.
